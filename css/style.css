@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cisco-blue: #049FD9;
+  --color-dark-navy: #1B1F3B;
+  --color-secondary-navy: #0E1122;
+  
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+/* Custom scrollbar and smooth scroll */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+/* Custom styles for high-fidelity interactive elements */
+.sticky-nav {
+  @apply sticky top-0 z-50 backdrop-blur-md bg-dark-navy/95 border-b border-white/10 transition-all duration-300;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-cisco-blue/10;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #ffffff 40%, var(--color-cisco-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-blue {
+  background: linear-gradient(135deg, var(--color-cisco-blue) 0%, #0384b5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Animation classes */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }

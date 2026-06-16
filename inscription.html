@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <link rel="icon" type="image/jpeg" href="src/assets/images/corepath_logo_1781352634158.jpg" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inscription - Corepath Academy</title>
+  <meta name="description" content="Inscrivez-vous dès aujourd'hui aux parcours de formation d'élite de Corepath Academy: Cisco CCNA, Linux, et Python." />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Tailwind CSS CDN for instant preview of standalone pages -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'cisco-blue': '#049FD9',
+            'dark-navy': '#1B1F3B',
+            'secondary-navy': '#0E1122',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 flex flex-col min-h-screen selection:bg-cisco-blue selection:text-white">
+
+  <!-- NAVIGATION HEADER -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-dark-navy/90 backdrop-blur-md border-b border-white/5 py-5 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="h-11 w-11 rounded-xl overflow-hidden border border-white/10 shadow-lg shadow-cisco-blue/10 group-hover:scale-105 transition-all duration-300 flex items-center justify-center">
+            <img src="src/assets/images/corepath_logo_1781352634158.jpg" alt="Corepath Logo" class="h-full w-full object-cover" referrerPolicy="no-referrer" />
+          </div>
+          <div class="flex flex-col">
+            <span class="font-bold text-lg sm:text-xl tracking-tight text-white group-hover:text-cisco-blue transition-colors">Corepath Academy</span>
+            <span class="text-[10px] font-mono uppercase tracking-widest text-[#049FD9]/80 font-semibold">Cisco • Linux • Python</span>
+          </div>
+        </a>
+
+        <!-- Desktop Links -->
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="index.html" class="nav-link text-slate-300 hover:text-white transition-colors py-1.5 px-0.5 border-b-2 border-transparent hover:border-cisco-blue/50 text-[14px] font-medium">Accueil</a>
+          <a href="about.html" class="nav-link text-slate-300 hover:text-white transition-colors py-1.5 px-0.5 border-b-2 border-transparent hover:border-cisco-blue/50 text-[14px] font-medium">À Propos</a>
+          <a href="formations.html" class="nav-link text-slate-300 hover:text-white transition-colors py-1.5 px-0.5 border-b-2 border-transparent hover:border-cisco-blue/50 text-[14px] font-medium">Formations</a>
+          <a href="contact.html" class="nav-link text-slate-300 hover:text-white transition-colors py-1.5 px-0.5 border-b-2 border-transparent hover:border-cisco-blue/50 text-[14px] font-medium">Contact</a>
+        </nav>
+
+        <div class="hidden lg:flex items-center gap-4">
+          <a href="inscription.html" class="bg-white/10 text-white hover:bg-white/15 px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300">S'inscrire</a>
+          <a href="formations.html" class="bg-cisco-blue text-white hover:bg-cisco-blue/90 px-4.5 py-2 rounded-xl text-sm font-semibold shadow-lg shadow-cisco-blue/20 transition-all duration-300">Toutes les Formations</a>
+        </div>
+
+        <button id="menu-btn" class="lg:hidden p-2 text-slate-300 hover:text-white focus:outline-none" aria-label="Toggle Menu">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-secondary-navy/95 backdrop-blur-lg border-b border-white/10 w-full mt-4 py-4 px-6 space-y-3">
+      <a href="index.html" class="mobile-nav-link block py-2.5 px-3 rounded-lg text-slate-300 hover:bg-white/5">Accueil</a>
+      <a href="about.html" class="mobile-nav-link block py-2.5 px-3 rounded-lg text-slate-300 hover:bg-white/5">À Propos</a>
+      <a href="formations.html" class="mobile-nav-link block py-2.5 px-3 rounded-lg text-slate-300 hover:bg-white/5">Formations</a>
+      <div class="pl-4 border-l-2 border-cisco-blue/30 space-y-1.5 my-2">
+        <a href="ccna1.html" class="block py-1 text-xs text-slate-400 hover:text-white">CCNA 1</a>
+        <a href="ccna2.html" class="block py-1 text-xs text-slate-400 hover:text-white">CCNA 2</a>
+        <a href="ccna3.html" class="block py-1 text-xs text-slate-400 hover:text-white">CCNA 3</a>
+        <a href="linux.html" class="block py-1 text-xs text-slate-400 hover:text-white">Linux Essentials</a>
+        <a href="python1.html" class="block py-1 text-xs text-slate-400 hover:text-white">Python 1</a>
+        <a href="python2.html" class="block py-1 text-xs text-slate-400 hover:text-white">Python 2</a>
+      </div>
+      <a href="contact.html" class="mobile-nav-link block py-2.5 px-3 rounded-lg text-slate-300 hover:bg-white/5">Contact</a>
+      <div class="pt-4 flex flex-col gap-2.5 border-t border-white/10">
+        <a href="inscription.html" class="w-full text-center bg-white/10 hover:bg-white/20 text-white py-2.5 rounded-xl font-semibold text-sm transition-all">S'inscrire</a>
+        <a href="formations.html" class="w-full text-center bg-cisco-blue hover:bg-cisco-blue/90 text-white py-2.5 rounded-xl font-semibold text-sm shadow-lg shadow-cisco-blue/25 transition-all">Tous les programmes</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow pt-24 animate-fade-in mb-12">
+    
+    <section class="py-10 text-center relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <span class="text-xs font-bold uppercase tracking-widest text-[#049FD9] mb-3 px-3 py-1 bg-cisco-blue/10 border border-cisco-blue/20 rounded-full inline-block">Portail Apprenants</span>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-4 mb-2">Inscription Instantanée</h1>
+        <p class="text-slate-400 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
+          Inscrivez-vous directement via WhatsApp de façon simple, rapide et sans longs formulaires à remplir !
+        </p>
+      </div>
+    </section>
+
+    <section class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="bg-secondary-navy border border-white/10 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+        
+        <!-- Subtle glow -->
+        <div class="absolute -top-12 -right-12 w-48 h-48 bg-cisco-blue/10 rounded-full filter blur-2xl pointer-events-none"></div>
+
+        <div class="text-center mb-8">
+          <div class="inline-flex bg-green-500/10 text-green-500 w-14 h-14 rounded-full items-center justify-center border border-green-500/20 mb-4">
+            <i data-lucide="message-circle" class="w-7 h-7"></i>
+          </div>
+          <h2 class="text-xl sm:text-2xl font-bold text-white">Aucun formulaire à remplir !</h2>
+          <p class="text-slate-400 text-xs sm:text-sm mt-3 leading-relaxed">
+            Pour un traitement ultra-rapide de votre candidature et réserver instantanément vos accès aux simulateurs de Labs, choisissez le programme qui vous intéresse dans la liste ci-dessous pour lancer l'inscription en direct avec un conseiller pédagogique sur WhatsApp :
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          
+          <!-- Course Card 1: CCNA 1 -->
+          <div class="bg-slate-950/40 border border-white/5 hover:border-cisco-blue/30 rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 transition-all duration-300 group">
+            <div class="flex items-center gap-4">
+              <div class="bg-cisco-blue/10 text-cisco-blue w-11 h-11 rounded-xl flex items-center justify-center border border-cisco-blue/25 flex-shrink-0">
+                <span class="font-bold text-[10px] font-mono">CCNA1</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-white text-sm group-hover:text-cisco-blue transition-colors text-left">CCNA 1 – Introduction aux Réseaux (ITN)</h3>
+                <p class="text-[11px] text-slate-400 mt-0.5 text-left">70 heures • Fondations fondamentales IP & Ethernet • Aucun prérequis</p>
+              </div>
+            </div>
+            <a href="https://wa.me/213561162780?text=Bonjour%20Corepath%20Academy,%20je%20souhaite%20m'inscrire%20au%20cours%20CCNA%201" target="_blank" class="w-full sm:w-auto bg-green-600 hover:bg-green-500 text-white font-bold py-2.5 px-5 rounded-xl text-xs flex items-center justify-center gap-2 transition-all shrink-0 shadow-lg shadow-green-500/10">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              S'inscrire
+            </a>
+          </div>
+
+          <!-- Course Card 2: CCNA 2 -->
+          <div class="bg-slate-950/40 border border-white/5 hover:border-cisco-blue/30 rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 transition-all duration-300 group">
+            <div class="flex items-center gap-4">
+              <div class="bg-cisco-blue/10 text-cisco-blue w-11 h-11 rounded-xl flex items-center justify-center border border-cisco-blue/25 flex-shrink-0">
+                <span class="font-bold text-[10px] font-mono">CCNA2</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-white text-sm group-hover:text-cisco-blue transition-colors text-left">CCNA 2 – Commutation, Routage & Sans Fil (SRWE)</h3>
+                <p class="text-[11px] text-slate-400 mt-0.5 text-left">70 heures • VLANs, EtherChannel, Wi-Fi & Sécurité • CCNA 1 recommandé</p>
+              </div>
+            </div>
+            <a href="https://wa.me/213561162780?text=Bonjour%20Corepath%20Academy,%20je%20souhaite%20m'inscrire%20au%20cours%20CCNA%202" target="_blank" class="w-full sm:w-auto bg-green-600 hover:bg-green-500 text-white font-bold py-2.5 px-5 rounded-xl text-xs flex items-center justify-center gap-2 transition-all shrink-0 shadow-lg shadow-green-500/10">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              S'inscrire
+            </a>
+          </div>
+
+          <!-- Course Card 3: CCNA 3 -->
+          <div class="bg-slate-950/40 border border-white/5 hover:border-cisco-blue/30 rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 transition-all duration-300 group">
+            <div class="flex items-center gap-4">
+              <div class="bg-cisco-blue/10 text-cisco-blue w-11 h-11 rounded-xl flex items-center justify-center border border-cisco-blue/25 flex-shrink-0">
+                <span class="font-bold text-[10px] font-mono">CCNA3</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-white text-sm group-hover:text-cisco-blue transition-colors text-left">CCNA 3 – Réseaux d’Entreprise, Sécurité & Auto</h3>
+                <p class="text-[11px] text-slate-400 mt-0.5 text-left">70 heures • OSPF, ACLs, NAT & Programmabilité • CCNA 2 recommandé</p>
+              </div>
+            </div>
+            <a href="https://wa.me/213561162780?text=Bonjour%20Corepath%20Academy,%20je%20souhaite%20m'inscrire%20au%20cours%20CCNA%203" target="_blank" class="w-full sm:w-auto bg-green-600 hover:bg-green-500 text-white font-bold py-2.5 px-5 rounded-xl text-xs flex items-center justify-center gap-2 transition-all shrink-0 shadow-lg shadow-green-500/10">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              S'inscrire
+            </a>
+          </div>
+
+          <!-- Course Card 4: Linux Essentials -->
+          <div class="bg-slate-950/40 border border-white/5 hover:border-yellow-550/30 rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 transition-all duration-300 group">
+            <div class="flex items-center gap-4">
+              <div class="bg-yellow-500/10 text-yellow-500 w-11 h-11 rounded-xl flex items-center justify-center border border-yellow-500/25 flex-shrink-0">
+                <span class="font-bold text-[10px] font-mono">LINUX</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-white text-sm group-hover:text-yellow-500 transition-colors text-left">Linux Essentials</h3>
+                <p class="text-[11px] text-slate-400 mt-0.5 text-left">40 heures • Admin, Bash & Ligne de commande • Débutant accepté</p>
+              </div>
+            </div>
+            <a href="https://wa.me/213561162780?text=Bonjour%20Corepath%20Academy,%20je%20souhaite%20m'inscrire%20au%20cours%20Linux%20Essentials" target="_blank" class="w-full sm:w-auto bg-green-600 hover:bg-green-500 text-white font-bold py-2.5 px-5 rounded-xl text-xs flex items-center justify-center gap-2 transition-all shrink-0 shadow-lg shadow-green-500/10">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              S'inscrire
+            </a>
+          </div>
+
+          <!-- Course Card 5: Python 1 -->
+          <div class="bg-slate-950/40 border border-white/5 hover:border-emerald-550/30 rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 transition-all duration-300 group">
+            <div class="flex items-center gap-4">
+              <div class="bg-emerald-500/10 text-emerald-500 w-11 h-11 rounded-xl flex items-center justify-center border border-emerald-500/25 flex-shrink-0">
+                <span class="font-bold text-[10px] font-mono">PYTH1</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-white text-sm group-hover:text-emerald-500 transition-colors text-left">Python Essentials 1</h3>
+                <p class="text-[11px] text-slate-400 mt-0.5 text-left">45 heures • Syntaxe, Variables, Listes & Fonctions • Aucun prérequis</p>
+              </div>
+            </div>
+            <a href="https://wa.me/213561162780?text=Bonjour%20Corepath%20Academy,%20je%20souhaite%20m'inscrire%20au%20cours%20Python%20Essentials%201" target="_blank" class="w-full sm:w-auto bg-green-600 hover:bg-green-500 text-white font-bold py-2.5 px-5 rounded-xl text-xs flex items-center justify-center gap-2 transition-all shrink-0 shadow-lg shadow-green-500/10">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              S'inscrire
+            </a>
+          </div>
+
+          <!-- Course Card 6: Python 2 -->
+          <div class="bg-slate-950/40 border border-white/5 hover:border-emerald-550/30 rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 transition-all duration-300 group">
+            <div class="flex items-center gap-4">
+              <div class="bg-emerald-500/10 text-emerald-500 w-11 h-11 rounded-xl flex items-center justify-center border border-emerald-500/25 flex-shrink-0">
+                <span class="font-bold text-[10px] font-mono">PYTH2</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-white text-sm group-hover:text-emerald-500 transition-colors text-left">Python Essentials 2</h3>
+                <p class="text-[11px] text-slate-400 mt-0.5 text-left">50 heures • Algorithmes, Modules & Objets avancés • Python 1 conseillé</p>
+              </div>
+            </div>
+            <a href="https://wa.me/213561162780?text=Bonjour%20Corepath%20Academy,%20je%20souhaite%20m'inscrire%20au%20cours%20Python%20Essentials%202" target="_blank" class="w-full sm:w-auto bg-green-600 hover:bg-green-500 text-white font-bold py-2.5 px-5 rounded-xl text-xs flex items-center justify-center gap-2 transition-all shrink-0 shadow-lg shadow-green-500/10">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              S'inscrire
+            </a>
+          </div>
+
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-white/5 text-center">
+          <p class="text-xs text-slate-400">
+            Vous préférez nous téléphoner ? Appelez notre secrétariat au <a href="tel:+213561162780" class="hover:text-cisco-blue font-bold text-white transition-colors">+213 561 162 780</a>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- IMMERSIVE SUCCESS MODAL DIALOG -->
+  <div id="success-modal" class="hidden fixed inset-0 z-100 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
+    <div class="bg-secondary-navy border border-white/10 p-6 sm:p-10 rounded-3xl max-w-lg w-full text-center relative shadow-2xl animate-fade-in">
+      <div class="bg-green-600/20 text-green-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 border border-green-500/30">
+        <i data-lucide="check-circle" class="w-10 h-10"></i>
+      </div>
+      <h3 class="text-2xl font-bold text-white mb-4">Inscription Enregistrée !</h3>
+      <p id="modal-text-greet" class="text-sm text-slate-300 leading-relaxed mb-8">
+        Votre demande a bien été reçue. Nous allons vous recontacter par téléphone très bientôt.
+      </p>
+      <button id="close-modal-btn" class="bg-cisco-blue hover:bg-cisco-blue/90 text-white font-semibold px-6 py-2.5 rounded-xl text-xs sm:text-sm transition-all w-full">
+        Compris, Merci !
+      </button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark-navy border-t border-white/10 py-12 text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="border-t border-white/10 pt-6 text-xs text-slate-500">
+        <p>Corepath Academy © 2026. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

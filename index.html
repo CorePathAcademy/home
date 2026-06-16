@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <link rel="icon" type="image/jpeg" href="src/assets/images/corepath_logo_1781352634158.jpg" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Corepath Academy - Devenez un expert Réseaux, Linux et Python</title>
+  <meta name="description" content="Formations professionnelles orientées pratique pour préparer votre carrière dans l'administration réseau, la cybersécurité et l'automatisation." />
+  <!-- Tailwind & Custom CSS compiled by Vite -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Tailwind CSS CDN for instant preview of standalone pages -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'cisco-blue': '#049FD9',
+            'dark-navy': '#1B1F3B',
+            'secondary-navy': '#0E1122',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Google Fonts (Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 flex flex-col min-h-screen selection:bg-cisco-blue selection:text-white">
+
+  <!-- NAVIGATION HEADER -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-dark-navy/90 backdrop-blur-md border-b border-white/5 py-5 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="flex items-center gap-3 group" id="nav-brand">
+          <div class="h-11 w-11 rounded-xl overflow-hidden border border-white/10 shadow-lg shadow-cisco-blue/10 group-hover:scale-105 transition-all duration-300 flex items-center justify-center">
+            <img src="src/assets/images/corepath_logo_1781352634158.jpg" alt="Corepath Logo" class="h-full w-full object-cover" referrerPolicy="no-referrer" />
+          </div>
+          <div class="flex flex-col">
+            <span class="font-bold text-lg sm:text-xl tracking-tight text-white group-hover:text-cisco-blue transition-colors">Corepath Academy</span>
+            <span class="text-[10px] font-mono uppercase tracking-widest text-[#049FD9]/80 font-semibold">Cisco • Linux • Python</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="index.html" class="nav-link text-slate-300 hover:text-white transition-colors py-1.5 px-0.5 border-b-2 border-transparent hover:border-cisco-blue/50 text-[14px] font-medium">Accueil</a>
+          <a href="about.html" class="nav-link text-slate-300 hover:text-white transition-colors py-1.5 px-0.5 border-b-2 border-transparent hover:border-cisco-blue/50 text-[14px] font-medium">À Propos</a>
+          <a href="formations.html" class="nav-link text-slate-300 hover:text-white transition-colors py-1.5 px-0.5 border-b-2 border-transparent hover:border-cisco-blue/50 text-[14px] font-medium">Formations</a>
+          
+          <!-- Simple nested visual courses indicator dropdown context -->
+          <div class="relative group">
+            <button class="flex items-center gap-1.5 text-slate-300 group-hover:text-white transition-colors py-1.5 text-[14px] font-medium">
+              Syllabus <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i>
+            </button>
+            <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-72 bg-secondary-navy border border-white/10 rounded-xl p-3 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+              <div class="space-y-1">
+                <a href="ccna1.html" class="block p-2 rounded-lg hover:bg-white/5 transition-colors group/item">
+                  <p class="text-xs font-semibold text-white group-hover/item:text-cisco-blue mb-0.5">CCNA 1 : Intro aux Réseaux</p>
+                  <p class="text-[10px] text-slate-400">Fondations fondamentales IP & Ethernet</p>
+                </a>
+                <a href="ccna2.html" class="block p-2 rounded-lg hover:bg-white/5 transition-colors group/item">
+                  <p class="text-xs font-semibold text-white group-hover/item:text-cisco-blue mb-0.5">CCNA 2 : Commutation & Routage</p>
+                  <p class="text-[10px] text-slate-400">VLANs, EtherChannel, Wi-Fi & Sécurité</p>
+                </a>
+                <a href="ccna3.html" class="block p-2 rounded-lg hover:bg-white/5 transition-colors group/item">
+                  <p class="text-xs font-semibold text-white group-hover/item:text-cisco-blue mb-0.5">CCNA 3 : Réseaux d'Entreprise & Auto</p>
+                  <p class="text-[10px] text-slate-400">OSPF, ACLs, NAT & Programmabilité</p>
+                </a>
+                <a href="linux.html" class="block p-2 rounded-lg hover:bg-white/5 transition-colors group/item shadow-inner border-t border-white/5">
+                  <p class="text-xs font-semibold text-white group-hover/item:text-cisco-blue mb-0.5">Linux Essentials</p>
+                  <p class="text-[10px] text-slate-400">Ligne de commande, Bash & Administration</p>
+                </a>
+                <a href="python1.html" class="block p-2 rounded-lg hover:bg-white/5 transition-colors group/item">
+                  <p class="text-xs font-semibold text-white group-hover/item:text-cisco-blue mb-0.5">Python Essentials 1</p>
+                  <p class="text-[10px] text-slate-400">Syntaxe de base, Structures & Fonctions</p>
+                </a>
+                <a href="python2.html" class="block p-2 rounded-lg hover:bg-white/5 transition-colors group/item">
+                  <p class="text-xs font-semibold text-white group-hover/item:text-cisco-blue mb-0.5">Python Essentials 2</p>
+                  <p class="text-[10px] text-slate-400">POO avancée, Fichiers & Programmation Pro</p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a href="contact.html" class="nav-link text-slate-300 hover:text-white transition-colors py-1.5 px-0.5 border-b-2 border-transparent hover:border-cisco-blue/50 text-[14px] font-medium">Contact</a>
+        </nav>
+
+        <!-- Dynamic Action Buttons -->
+        <div class="hidden lg:flex items-center gap-4">
+          <a href="inscription.html" class="bg-white/10 text-white hover:bg-white/15 px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300" id="btn-preinscrire">S'inscrire</a>
+          <a href="formations.html" class="bg-cisco-blue text-white hover:bg-cisco-blue/90 px-4.5 py-2 rounded-xl text-sm font-semibold shadow-lg shadow-cisco-blue/20 transition-all duration-300" id="btn-formations-nav">Voir les Programmes</a>
+        </div>
+
+        <!-- Mobile hamburger menu button -->
+        <button id="menu-btn" class="lg:hidden p-2 text-slate-300 hover:text-white focus:outline-none" aria-label="Toggle Menu">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-secondary-navy/95 backdrop-blur-lg border-b border-white/10 w-full mt-4 py-4 px-6 space-y-3">
+      <a href="index.html" class="mobile-nav-link block py-2.5 px-3 rounded-lg text-slate-300 hover:bg-white/5">Accueil</a>
+      <a href="about.html" class="mobile-nav-link block py-2.5 px-3 rounded-lg text-slate-300 hover:bg-white/5">À Propos</a>
+      <a href="formations.html" class="mobile-nav-link block py-2.5 px-3 rounded-lg text-slate-300 hover:bg-white/5">Formations</a>
+      <div class="pl-4 border-l-2 border-cisco-blue/30 space-y-1.5 my-2">
+        <a href="ccna1.html" class="block py-1 text-xs text-slate-400 hover:text-white">CCNA 1</a>
+        <a href="ccna2.html" class="block py-1 text-xs text-slate-400 hover:text-white">CCNA 2</a>
+        <a href="ccna3.html" class="block py-1 text-xs text-slate-400 hover:text-white">CCNA 3</a>
+        <a href="linux.html" class="block py-1 text-xs text-slate-400 hover:text-white">Linux Essentials</a>
+        <a href="python1.html" class="block py-1 text-xs text-slate-400 hover:text-white">Python 1</a>
+        <a href="python2.html" class="block py-1 text-xs text-slate-400 hover:text-white">Python 2</a>
+      </div>
+      <a href="contact.html" class="mobile-nav-link block py-2.5 px-3 rounded-lg text-slate-300 hover:bg-white/5">Contact</a>
+      <div class="pt-4 flex flex-col gap-2.5 border-t border-white/10">
+        <a href="inscription.html" class="w-full text-center bg-white/10 hover:bg-white/20 text-white py-2.5 rounded-xl font-semibold text-sm transition-all">S'inscrire</a>
+        <a href="formations.html" class="w-full text-center bg-cisco-blue hover:bg-cisco-blue/90 text-white py-2.5 rounded-xl font-semibold text-sm shadow-lg shadow-cisco-blue/25 transition-all">Tous les programmes</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <main class="flex-grow pt-24">
+    <section class="relative py-20 lg:py-32 overflow-hidden bg-radial from-slate-900 via-slate-950 to-slate-950">
+      
+      <!-- Ambient decorative glowing nodes -->
+      <div class="absolute top-1/4 left-1/10 w-96 h-96 bg-cisco-blue/10 rounded-full filter blur-3xl opacity-30 animate-pulse pointer-events-none"></div>
+      <div class="absolute bottom-1/4 right-1/10 w-[450px] bg-dark-navy/40 rounded-full filter blur-3xl opacity-40 pointer-events-none"></div>
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-7 flex flex-col items-start text-left animate-fade-in">
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 bg-cisco-blue/10 border border-cisco-blue/30 text-cisco-blue px-3.5 py-1.5 rounded-full text-xs font-semibold mb-6 shadow-sm">
+              <span class="w-2 h-2 rounded-full bg-cisco-blue animate-ping"></span>
+              Académie Officielle de Préparation Professionnelle
+            </div>
+            
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-4 font-sans leading-tight">
+              <span class="gradient-text">Corepath Academy</span>
+            </h1>
+            
+            <h2 class="text-2xl sm:text-3xl font-bold text-cisco-blue mb-6">
+              Devenez un expert en Réseaux, Linux et Python
+            </h2>
+            
+            <p class="text-lg text-slate-300 max-w-2xl mb-8 leading-relaxed font-light">
+              Formations professionnelles orientées pratique pour préparer votre carrière dans l'administration réseau, la cybersécurité et l'automatisation.
+            </p>
+
+            <!-- Prochaine Session CCNA 1 Countdown Box -->
+            <div class="w-full max-w-xl bg-dark-navy/60 backdrop-blur-md border border-cisco-blue/30 rounded-2xl p-5 mb-8 shadow-xl shadow-cisco-blue/5 relative overflow-hidden group">
+              <!-- Glow backlights decoration -->
+              <div class="absolute -right-10 -bottom-10 w-32 h-32 bg-cisco-blue/15 rounded-full filter blur-xl pointer-events-none group-hover:bg-cisco-blue/25 transition-all duration-500"></div>
+              
+              <div class="flex flex-col md:flex-row md:items-center justify-between gap-5 relative z-10">
+                <div class="space-y-1">
+                  <div class="flex items-center gap-2">
+                    <span class="flex h-2.5 w-2.5 relative">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
+                    </span>
+                    <span class="text-xs font-bold uppercase tracking-wider text-cisco-blue font-mono">PROCHAINE SESSION CCNA 1</span>
+                  </div>
+                  <h3 class="text-base font-bold text-white leading-tight">
+                    Lancement le <span class="text-white underline decoration-cisco-blue/60 decoration-2 underline-offset-4 font-semibold">28 Juin 2026</span>
+                  </h3>
+                  <p class="text-[11px] text-slate-400">Pour réserver votre place aux labos virtuels d'élite.</p>
+                </div>
+                
+                <!-- Countdown Numbers Container -->
+                <div class="flex items-center gap-1.5 font-mono text-center self-start md:self-auto sm:gap-2">
+                  <!-- Days -->
+                  <div class="flex flex-col items-center">
+                    <div class="bg-slate-900/90 border border-white/5 rounded-lg w-12 h-12 flex items-center justify-center text-lg font-extrabold text-white shadow-md" id="countdown-days">
+                      00
+                    </div>
+                    <span class="text-[9px] uppercase text-slate-500 mt-1.5 tracking-wider font-semibold font-sans">Jours</span>
+                  </div>
+                  <span class="text-cisco-blue font-bold text-lg mb-4">:</span>
+                  
+                  <!-- Hours -->
+                  <div class="flex flex-col items-center">
+                    <div class="bg-slate-900/90 border border-white/5 rounded-lg w-12 h-12 flex items-center justify-center text-lg font-extrabold text-white shadow-md" id="countdown-hours">
+                      00
+                    </div>
+                    <span class="text-[9px] uppercase text-slate-500 mt-1.5 tracking-wider font-semibold font-sans">Heures</span>
+                  </div>
+                  <span class="text-cisco-blue font-bold text-lg mb-4">:</span>
+                  
+                  <!-- Minutes -->
+                  <div class="flex flex-col items-center">
+                    <div class="bg-slate-900/90 border border-white/5 rounded-lg w-12 h-12 flex items-center justify-center text-lg font-extrabold text-white shadow-md" id="countdown-minutes">
+                      00
+                    </div>
+                    <span class="text-[9px] uppercase text-slate-500 mt-1.5 tracking-wider font-semibold font-sans">Min</span>
+                  </div>
+                  <span class="text-cisco-blue font-bold text-lg mb-4">:</span>
+                  
+                  <!-- Seconds -->
+                  <div class="flex flex-col items-center">
+                    <div class="bg-slate-900/90 border border-white/5 rounded-lg w-12 h-12 flex items-center justify-center text-lg font-extrabold text-[#049FD9] shadow-md" id="countdown-seconds">
+                      00
+                    </div>
+                    <span class="text-[9px] uppercase text-slate-500 mt-1.5 tracking-wider font-semibold font-sans">Sec</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+              <a href="formations.html" class="bg-cisco-blue hover:bg-cisco-blue/90 text-white font-bold py-4 px-8 rounded-xl shadow-xl shadow-cisco-blue/20 text-center transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-2">
+                Découvrir les formations
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+              </a>
+              <a href="inscription.html" class="bg-white/10 hover:bg-white/15 text-white border border-white/10 font-bold py-4 px-8 rounded-xl text-center backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-2">
+                S'inscrire maintenant
+                <i data-lucide="edit-3" class="w-5 h-5"></i>
+              </a>
+            </div>
+
+            <!-- Trust parameters -->
+            <div class="mt-12 pt-8 border-t border-white/5 w-full grid grid-cols-3 gap-4 sm:gap-8">
+              <div>
+                <p class="text-2xl sm:text-3xl font-bold text-white tracking-tight">100%</p>
+                <p class="text-xs sm:text-sm text-slate-400">Pratique & Labos</p>
+              </div>
+              <div class="border-l border-white/10 pl-4 sm:pl-8">
+                <p class="text-2xl sm:text-3xl font-bold text-white tracking-tight">6+</p>
+                <p class="text-xs sm:text-sm text-slate-400">Grandes Certifications</p>
+              </div>
+              <div class="border-l border-white/10 pl-4 sm:pl-8">
+                <p class="text-2xl sm:text-3xl font-bold text-white tracking-tight">24/7</p>
+                <p class="text-xs sm:text-sm text-slate-400">Accès Lab Virtuel</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Hero illustration styled perfectly -->
+          <div class="lg:col-span-5 relative mt-8 lg:mt-0 max-w-md mx-auto lg:max-w-none flex justify-center animate-fade-in delay-200">
+            <div class="relative w-full aspect-square max-w-[420px] bg-secondary-navy border border-white/10 p-6 rounded-2xl shadow-2xl flex flex-col justify-between overflow-hidden">
+              <div class="absolute -top-4 -right-4 w-40 h-40 bg-cisco-blue/20 rounded-full filter blur-2xl pointer-events-none"></div>
+              
+              <!-- Console Interface Simulation Header -->
+              <div class="flex items-center justify-between border-b border-white/5 pb-3">
+                <div class="flex items-center gap-1.5">
+                  <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+                  <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+                  <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
+                </div>
+                <span class="text-xs font-mono text-slate-400">corepath-router-lab</span>
+                <span class="w-3 h-3"></span>
+              </div>
+
+              <!-- Terminal Output Display -->
+              <div class="my-6 flex-grow font-mono text-xs text-emerald-400 space-y-2 select-none">
+                <p class="text-slate-500">> ssh corepath@academy-core</p>
+                <p class="text-slate-300">Connecting to Corepath Labs...</p>
+                <p class="text-white text-semibold">[SUCCESS] Connection active.</p>
+                <p class="text-[#049FD9] mt-3">Router# configure terminal</p>
+                <p class="text-[#049FD9]">Router(config)# interface GigabitEthernet0/0/0</p>
+                <p class="text-[#049FD9]">Router(config-if)# ip address 192.168.1.1 255.255.255.0</p>
+                <p class="text-yellow-400">Router(config-if)# no shutdown</p>
+                <p class="text-slate-500 font-light mt-4">%LINK-5-CHANGED: Interface GigabitEthernet0/0/0, changed state to UP</p>
+              </div>
+
+              <!-- Active Status footer widget -->
+              <div class="bg-dark-navy border border-white/5 rounded-xl p-3 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <div class="w-2.5 h-2.5 rounded-full bg-cisco-blue animate-ping"></div>
+                  <span class="text-[11px] text-slate-300 font-medium">Lab Réseau Virtuel Online</span>
+                </div>
+                <div class="flex gap-1 text-[10px] font-mono text-slate-400">
+                  <span class="bg-white/5 px-2 py-0.5 rounded">IOS-XE</span>
+                  <span class="bg-white/5 px-2 py-0.5 rounded">Py3</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE SPECIALTIES (GRID) -->
+    <section class="py-16 bg-secondary-navy/40 border-y border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-sm font-bold uppercase tracking-widest text-cisco-blue mb-2">Les 3 Piliers du Succès</h2>
+          <p class="text-3xl font-bold text-white mb-4">Un écosystème complet pour l'ingénieur de demain</p>
+          <p class="text-slate-400">Corepath Academy réunit les technologies clés du marché informatique moderne pour maximiser votre employabilité.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Specialty 1: Cisco -->
+          <div class="bg-dark-navy border border-white/5 p-8 rounded-2xl card-hover relative group flex flex-col justify-between">
+            <div>
+              <div class="bg-cisco-blue/15 text-cisco-blue w-14 h-14 rounded-xl flex items-center justify-center mb-6 border border-cisco-blue/20">
+                <i data-lucide="network" class="w-7 h-7"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3 group-hover:text-cisco-blue transition-colors">Ingénierie Réseau Cisco</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Maîtrisez le routage dynamique, la commutation intelligente, la sécurité LAN/WLAN et découvrez l'automatisation avec les standards officiels de Cisco CCNA.
+              </p>
+            </div>
+            <a href="formations.html" class="text-cisco-blue hover:text-white font-semibold text-sm inline-flex items-center gap-2 group/link">
+              Parcourir les modules Cisco
+              <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-1.5"></i>
+            </a>
+          </div>
+
+          <!-- Specialty 2: Linux -->
+          <div class="bg-dark-navy border border-white/5 p-8 rounded-2xl card-hover relative group flex flex-col justify-between">
+            <div>
+              <div class="bg-yellow-500/10 text-yellow-500 w-14 h-14 rounded-xl flex items-center justify-center mb-6 border border-yellow-500/20">
+                <i data-lucide="terminal" class="w-7 h-7"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3 group-hover:text-yellow-500 transition-colors">Administration Système Linux</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Domptez le terminal, gérez les fichiers de configuration système, pilotez les permissions de sécurité et apprenez à automatiser avec des scripts shell Bash.
+              </p>
+            </div>
+            <a href="linux.html" class="text-yellow-400 hover:text-white font-semibold text-sm inline-flex items-center gap-2 group/link">
+              Découvrir Linux Essentials
+              <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-1.5"></i>
+            </a>
+          </div>
+
+          <!-- Specialty 3: Python -->
+          <div class="bg-dark-navy border border-white/5 p-8 rounded-2xl card-hover relative group flex flex-col justify-between">
+            <div>
+              <div class="bg-emerald-500/10 text-emerald-500 w-14 h-14 rounded-xl flex items-center justify-center mb-6 border border-emerald-500/20">
+                <i data-lucide="code-2" class="w-7 h-7"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3 group-hover:text-emerald-500 transition-colors">Programmation Python</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Du premier script à la programmation orientée objet d'entreprise. Idéal pour l'automatisation réseau (NetDevOps) et le scripting autonome de haut niveau.
+              </p>
+            </div>
+            <a href="formations.html" class="text-emerald-400 hover:text-white font-semibold text-sm inline-flex items-center gap-2 group/link">
+              Explorer les programmes Python
+              <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-1.5"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEY ADVANTAGES SECTION -->
+    <section class="py-20 lg:py-28 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          
+          <div class="relative order-2 lg:order-1 flex justify-center">
+            <div class="relative w-full max-w-md bg-secondary-navy rounded-2xl border border-white/10 p-6 space-y-5 shadow-2xl">
+              <h4 class="text-white font-bold text-lg border-b border-white/5 pb-3 flex items-center gap-2">
+                <i data-lucide="activity" class="text-cisco-blue w-5 h-5"></i>
+                Avantages Pratiques Apprenants
+              </h4>
+              <div class="space-y-4">
+                <div class="flex items-start gap-3.5">
+                  <div class="bg-cisco-blue/10 p-2 rounded-lg text-cisco-blue mt-0.5">
+                    <i data-lucide="computer" class="w-4.5 h-4.5"></i>
+                  </div>
+                  <div>
+                    <h5 class="font-semibold text-white text-sm">Labos Virtuels Haute Performance</h5>
+                    <p class="text-xs text-slate-400">Accédez à des serveurs d'apprentissage et des routeurs réels simulés à tout moment pour pratiquer de chez vous.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3.5">
+                  <div class="bg-cisco-blue/10 p-2 rounded-lg text-cisco-blue mt-0.5">
+                    <i data-lucide="arrow-up-right" class="w-4.5 h-4.5"></i>
+                  </div>
+                  <div>
+                    <h5 class="font-semibold text-white text-sm">Méthodologie Orientée Métier</h5>
+                    <p class="text-xs text-slate-400">Pas de théorie stérile. Toutes nos sessions sont construites autour de scénarios de réseaux réels d'entreprise.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3.5">
+                  <div class="bg-cisco-blue/10 p-2 rounded-lg text-cisco-blue mt-0.5">
+                    <i data-lucide="award" class="w-4.5 h-4.5"></i>
+                  </div>
+                  <div>
+                    <h5 class="font-semibold text-white text-sm">Préparation aux Certifications Internationales</h5>
+                    <p class="text-xs text-slate-400">Syllabus officiel aligné sur les exigences Cisco CCNA IP, Linux LPI Essentials, et Python PCAP.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-1 lg:order-2 flex flex-col items-start">
+            <span class="text-xs font-bold uppercase tracking-widest text-cisco-blue mb-2">Pourquoi Choisir Corepath ?</span>
+            <h3 class="text-3xl font-bold text-white mb-6">Une pédagogie de pointe développée par des experts réseaux</h3>
+            <p class="text-slate-300 mb-6 leading-relaxed">
+              Chez Corepath Academy, nous pensons que les compétences techniques s'acquièrent en se confrontant à la réalité des configurations. Notre formation est conçue par des instructeurs certifiés Cisco et Linux, avec des parcours progressifs allant des concepts de base aux structures de routage complexes.
+            </p>
+            <div class="space-y-3 mb-8 w-full">
+              <div class="flex items-center gap-3 text-slate-300">
+                <i data-lucide="check" class="text-cisco-blue w-5 h-5 flex-shrink-0"></i>
+                <span>Parcours allant du niveau Débutant absolu à l'Ingénieur autonome</span>
+              </div>
+              <div class="flex items-center gap-3 text-slate-300">
+                <i data-lucide="check" class="text-cisco-blue w-5 h-5 flex-shrink-0"></i>
+                <span>Supports de cours illustrés et guides de lab étape par étape</span>
+              </div>
+              <div class="flex items-center gap-3 text-slate-300">
+                <i data-lucide="check" class="text-cisco-blue w-5 h-5 flex-shrink-0"></i>
+                <span>Simulation d'examens officiels blancs de certification inclus</span>
+              </div>
+            </div>
+            <a href="about.html" class="text-cisco-blue font-bold tracking-wide hover:text-white inline-flex items-center gap-1.5 group">
+              En savoir plus sur notre philosophie
+              <i data-lucide="chevron-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="py-16 bg-dark-navy border-t border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-xs font-bold uppercase tracking-widest text-cisco-blue mb-2">Témoignages Apprenants</h2>
+          <p class="text-2xl sm:text-3xl font-bold text-white">Ce que disent nos étudiants diplômés</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="bg-secondary-navy/40 p-6 rounded-2xl border border-white/5 flex flex-col justify-between">
+            <p class="text-slate-300 text-sm italic leading-relaxed mb-6">
+              "Grâce aux labs intensifs du pack CCNA de Corepath Academy, j'ai pu décrocher ma certification CCNA 200-301 du premier coup. L'approche pratique et l'accès permanent aux simulateurs de labos font toute la différence !"
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="bg-cisco-blue/20 text-cisco-blue w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm">
+                KM
+              </div>
+              <div>
+                <p class="text-sm font-bold text-white">Karim M.</p>
+                <p class="text-[11px] text-slate-400">Ingénieur Réseau Junior</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="bg-secondary-navy/40 p-6 rounded-2xl border border-white/5 flex flex-col justify-between">
+            <p class="text-slate-300 text-sm italic leading-relaxed mb-6">
+              "J'ai suivi la formation Linux Essentials et Python 1 pour entamer une reconversion dans le devops. Les scripts Bash et l'apprentissage de Python m'ont ouvert des portes incroyables. Je recommande les yeux fermés."
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="bg-yellow-500/20 text-yellow-500 w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm">
+                SB
+              </div>
+              <div>
+                <p class="text-sm font-bold text-white">Sarah B.</p>
+                <p class="text-[11px] text-slate-400">Administratrice Système Linux</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="bg-secondary-navy/40 p-6 rounded-2xl border border-white/5 flex flex-col justify-between">
+            <p class="text-slate-300 text-sm italic leading-relaxed mb-6">
+              "La passerelle entre le réseau et Python (l'automatisation Réseau-SDN) enseignée dans la formation Python 2 est unique. Je gagne aujourd'hui un temps précieux au travail grâce aux connaissances acquises."
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="bg-emerald-500/20 text-emerald-500 w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm">
+                YT
+              </div>
+              <div>
+                <p class="text-sm font-bold text-white">Yanis T.</p>
+                <p class="text-[11px] text-slate-400">Ingénieur Cloud / Automation</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION SECTION -->
+    <section class="py-16 bg-radial from-cisco-blue/20 via-slate-950 to-slate-950 text-center relative border-t border-white/5">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <h3 class="text-2xl sm:text-4xl font-bold text-white mb-4">Prêt à propulser votre carrière technique ?</h3>
+        <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto mb-8">
+          Rejoignez dès aujourd'hui les rangs des professionnels qualifiés. Inscrivez-vous et accédez aux meilleures ressources de formation en français.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="inscription.html" class="bg-cisco-blue hover:bg-cisco-blue/90 text-white font-bold py-3.5 px-8 rounded-xl shadow-lg shadow-cisco-blue/25 transition-all w-full sm:w-auto">
+            S'inscrire à une formation
+          </a>
+          <a href="formations.html" class="bg-white/5 hover:bg-white/10 text-slate-300 font-semibold py-3.5 px-8 rounded-xl transition-all w-full sm:w-auto border border-white/10">
+            Explorer les programmes
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark-navy border-t border-white/10 py-12 text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+        
+        <!-- Brand Info -->
+        <div class="flex flex-col gap-4">
+          <a href="index.html" class="flex items-center gap-3">
+            <div class="h-10 w-10 rounded-lg overflow-hidden border border-white/10 flex items-center justify-center">
+              <img src="src/assets/images/corepath_logo_1781352634158.jpg" alt="Corepath Logo" class="h-full w-full object-cover" referrerPolicy="no-referrer" />
+            </div>
+            <span class="font-bold text-white text-lg tracking-tight">Corepath Academy</span>
+          </a>
+          <p class="text-xs leading-relaxed">
+            Académie d'élite spécialisée dans les compétences réseaux de pointe, l'administration système Linux et la programmation Python.
+          </p>
+          <!-- Social Icons required by design package -->
+          <div class="flex items-center gap-3.5 mt-2">
+            <a href="https://www.facebook.com/profile.php?id=61590667865435" target="_blank" class="w-9 h-9 rounded-lg bg-white/5 hover:bg-cisco-blue hover:text-white transition-all flex items-center justify-center border border-white/5" aria-label="Facebook">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/corepathacademy" target="_blank" class="w-9 h-9 rounded-lg bg-white/5 hover:bg-cisco-blue hover:text-white transition-all flex items-center justify-center border border-white/5" aria-label="Instagram">
+              <svg class="w-4 h-4 stroke-current fill-none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://www.tiktok.com" target="_blank" class="w-9 h-9 rounded-lg bg-white/5 hover:bg-cisco-blue hover:text-white transition-all flex items-center justify-center border border-white/5" aria-label="TikTok">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.02 1.59 4.23.94.94 2.29 1.51 3.7 1.57v3.74c-1.4-.07-2.79-.62-3.88-1.55-.38-.34-.73-.72-1.02-1.15v6.52c0 1.95-.5 3.82-1.39 5.37-1.3 1.98-3.5 3.31-6 3.32-3.12 0-5.88-2-6.93-4.93C1.65 13.9 2.5 10.6 5.1 8.87c1.47-.98 3.25-1.46 5.01-1.33v3.7c-.43-.07-.86-.1-1.29-.07-1.63.12-3.1 1.15-3.69 2.67-.57 1.54-.15 3.4 1 4.5 1 1 2.55 1.45 3.93.93 1.1-.4 1.83-1.4 1.93-2.58.01-.2 0-.4 0-.6V0z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-white/5 pb-2">Liens Rapides</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="index.html" class="hover:text-cisco-blue transition-colors">Accueil</a></li>
+            <li><a href="about.html" class="hover:text-cisco-blue transition-colors">À Propos de nous</a></li>
+            <li><a href="formations.html" class="hover:text-cisco-blue transition-colors">Nos Formations</a></li>
+            <li><a href="inscription.html" class="hover:text-cisco-blue transition-colors">Inscriptions</a></li>
+            <li><a href="contact.html" class="hover:text-cisco-blue transition-colors">Contact & Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Training Programs Footer Links -->
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-white/5 pb-2">Programmes Directs</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="ccna1.html" class="hover:text-cisco-blue transition-colors">CCNA 1 – Intro Réseaux</a></li>
+            <li><a href="ccna2.html" class="hover:text-cisco-blue transition-colors">CCNA 2 – Switch & Routage</a></li>
+            <li><a href="ccna3.html" class="hover:text-cisco-blue transition-colors">CCNA 3 – Réseaux d'Entreprise</a></li>
+            <li><a href="linux.html" class="hover:text-cisco-blue transition-colors">Linux Essentials</a></li>
+            <li><a href="python1.html" class="hover:text-cisco-blue transition-colors">Python Essentials 1</a></li>
+            <li><a href="python2.html" class="hover:text-cisco-blue transition-colors">Python Essentials 2</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact details -->
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-white/5 pb-2">Contactez-nous</h4>
+          <ul class="space-y-3.5 text-xs">
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="phone" class="w-4.5 h-4.5 text-cisco-blue flex-shrink-0"></i>
+              <span class="text-slate-300 font-medium hover:text-white transition-colors">+213 561 162 780</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="mail" class="w-4.5 h-4.5 text-cisco-blue flex-shrink-0"></i>
+              <span class="text-slate-300 font-medium hover:text-white transition-colors break-all">corepathacademy@gmail.com</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="map-pin" class="w-4.5 h-4.5 text-cisco-blue flex-shrink-0 mt-0.5"></i>
+              <span>Académie Virtuelle / Campus Distanciel & Labs en Ligne</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>Corepath Academy © 2026. Tous droits réservés.</p>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:text-slate-300 transition-colors">Conditions d'utilisation</a>
+          <span>•</span>
+          <a href="#" class="hover:text-slate-300 transition-colors">Politique de confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Link common JS logic -->
+  <script src="js/main.js"></script>
+</body>
+</html>
