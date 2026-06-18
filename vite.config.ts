@@ -28,6 +28,7 @@ export default defineConfig(() => {
           python1: path.resolve(__dirname, 'python1.html'),
           python2: path.resolve(__dirname, 'python2.html'),
           inscription: path.resolve(__dirname, 'inscription.html'),
+          landing_ccna1: path.resolve(__dirname, 'landing-ccna1.html'),
           contact: path.resolve(__dirname, 'contact.html'),
         },
       },

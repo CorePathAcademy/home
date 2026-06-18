@@ -353,9 +353,8 @@ function initCCNA1Countdown() {
 
   if (!daysEl && !hoursEl && !minutesEl && !secondsEl) return;
 
-  // Next Session target date: June 28, 2026, 09:00 AM (French/Algerian timezone or standard local time)
-  // Which corresponds to the date '2026-06-28T09:00:00'
-  const targetDate = new Date('2026-06-28T09:00:00').getTime();
+  // Next Session target date: June 28, 2026, 18:00 (Algerian UTC+1 timezone)
+  const targetDate = new Date('2026-06-28T18:00:00+01:00').getTime();
 
   function updateTimer() {
     const now = new Date().getTime();
