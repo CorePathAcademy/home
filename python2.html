@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <link rel="icon" type="image/jpeg" href="src/assets/images/corepath_academy_logo_1787942155850.jpg" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python Essentials 2 (PCAP) - Corepath Academy</title>
+  <meta name="description" content="Formation certifiante Python Essentials 2. Maîtrisez la POO, les classes, l'héritage, les fichiers persistants et la programmation avancée." />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'cisco-blue': '#049FD9',
+            'dark-navy': '#1B1F3B',
+            'secondary-navy': '#0E1122',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 flex flex-col min-h-screen selection:bg-emerald-500 selection:text-slate-950">
+
+  <!-- NAVIGATION HEADER -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-dark-navy/90 backdrop-blur-md border-b border-white/5 py-5 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="h-11 w-11 rounded-full overflow-hidden border border-white/10 shadow-lg shadow-cisco-blue/10 group-hover:scale-105 transition-all duration-300 flex items-center justify-center bg-slate-900">
+            <img src="src/assets/images/corepath_academy_logo_1787942155850.jpg" alt="Corepath Academy Logo" class="h-full w-full object-cover" referrerPolicy="no-referrer" />
+          </div>
+          <div class="flex flex-col">
+            <span class="font-bold text-lg sm:text-xl tracking-tight text-white group-hover:text-cisco-blue transition-colors">Corepath Academy</span>
+            <span class="text-[10px] font-mono uppercase tracking-widest text-[#049FD9]/80 font-semibold">Cisco • Linux • Python</span>
+          </div>
+        </a>
+
+        <!-- Desktop Links -->
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="index.html" class="nav-link text-slate-300 hover:text-white transition-colors py-1.5 px-0.5 border-b-2 border-transparent hover:border-cisco-blue/50 text-[14px] font-medium">Accueil</a>
+          <a href="about.html" class="nav-link text-slate-300 hover:text-white transition-colors py-1.5 px-0.5 border-b-2 border-transparent hover:border-cisco-blue/50 text-[14px] font-medium">À Propos</a>
+          <a href="formations.html" class="nav-link text-slate-300 hover:text-white transition-colors py-1.5 px-0.5 border-b-2 border-transparent hover:border-cisco-blue/50 text-[14px] font-medium">Formations</a>
+          
+          <div class="relative group">
+            <button class="flex items-center gap-1.5 text-emerald-400 font-semibold py-1.5 text-[14px]">
+              Syllabus <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i>
+            </button>
+            <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-80 bg-secondary-navy border border-white/10 rounded-xl p-3 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+              <div class="space-y-1">
+                <a href="ccna-devnet.html" class="block p-2 rounded-lg hover:bg-white/5 transition-colors group/item">
+                  <div class="flex items-center justify-between">
+                    <p class="text-xs font-semibold text-cisco-blue mb-0.5">CCNA DevNet Associate</p>
+                    <span class="text-[9px] bg-emerald-500 text-slate-950 font-bold px-1.5 py-0.2 rounded font-mono">30 000 DA</span>
+                  </div>
+                  <p class="text-[10px] text-slate-400">Voucher -58% à -70% Pearson VUE</p>
+                </a>
+                <a href="ccna1.html" class="block p-2 rounded-lg hover:bg-white/5 transition-colors group/item">
+                  <div class="flex items-center justify-between">
+                    <p class="text-xs font-semibold text-white group-hover/item:text-cisco-blue mb-0.5">CCNA 1 : Intro aux Réseaux</p>
+                    <span class="text-[9px] text-slate-400 font-mono">8 000 DA</span>
+                  </div>
+                  <p class="text-[10px] text-slate-400">Fondations fondamentales IP & Ethernet</p>
+                </a>
+                <a href="ccna2.html" class="block p-2 rounded-lg hover:bg-white/5 transition-colors group/item">
+                  <div class="flex items-center justify-between">
+                    <p class="text-xs font-semibold text-white group-hover/item:text-cisco-blue mb-0.5">CCNA 2 : Commutation & Routage</p>
+                    <span class="text-[9px] text-slate-400 font-mono">8 000 DA</span>
+                  </div>
+                  <p class="text-[10px] text-slate-400">VLANs, EtherChannel, Wi-Fi & Sécurité</p>
+                </a>
+                <a href="ccna3.html" class="block p-2 rounded-lg hover:bg-white/5 transition-colors group/item">
+                  <div class="flex items-center justify-between">
+                    <p class="text-xs font-semibold text-white group-hover/item:text-cisco-blue mb-0.5">CCNA 3 : Réseaux d'Entreprise</p>
+                    <span class="text-[9px] text-slate-400 font-mono">8 000 DA</span>
+                  </div>
+                  <p class="text-[10px] text-slate-400">OSPF, ACLs, NAT & Programmabilité</p>
+                </a>
+                <a href="linux.html" class="block p-2 rounded-lg hover:bg-white/5 transition-colors group/item border-t border-white/5">
+                  <div class="flex items-center justify-between">
+                    <p class="text-xs font-semibold text-white group-hover/item:text-cisco-blue mb-0.5">Linux Essentials</p>
+                    <span class="text-[9px] text-yellow-400 font-mono">10 000 DA</span>
+                  </div>
+                  <p class="text-[10px] text-slate-400">Ligne de commande, Bash & Administration</p>
+                </a>
+                <a href="python1.html" class="block p-2 rounded-lg hover:bg-white/5 transition-colors group/item">
+                  <div class="flex items-center justify-between">
+                    <p class="text-xs font-semibold text-white group-hover/item:text-cisco-blue mb-0.5">Python Essentials 1</p>
+                    <span class="text-[9px] text-emerald-400 font-mono">7 000 DA</span>
+                  </div>
+                  <p class="text-[10px] text-slate-400">Syntaxe de base, Structures & Fonctions</p>
+                </a>
+                <a href="python2.html" class="block p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/30 transition-colors group/item">
+                  <div class="flex items-center justify-between">
+                    <p class="text-xs font-semibold text-emerald-400 mb-0.5">Python Essentials 2</p>
+                    <span class="text-[9px] text-emerald-400 font-mono font-bold">7 000 DA</span>
+                  </div>
+                  <p class="text-[10px] text-slate-300">POO avancée, Fichiers & Programmation Pro</p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a href="contact.html" class="nav-link text-slate-300 hover:text-white transition-colors py-1.5 px-0.5 border-b-2 border-transparent hover:border-cisco-blue/50 text-[14px] font-medium">Contact</a>
+        </nav>
+
+        <div class="hidden lg:flex items-center gap-4">
+          <a href="inscription.html" class="bg-white/10 text-white hover:bg-white/15 px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300">S'inscrire</a>
+          <a href="formations.html" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 px-4.5 py-2 rounded-xl text-sm font-bold shadow-lg shadow-emerald-500/20 transition-all duration-300">Toutes les Formations</a>
+        </div>
+
+        <button id="menu-btn" class="lg:hidden p-2 text-slate-300 hover:text-white focus:outline-none" aria-label="Toggle Menu">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-secondary-navy/95 backdrop-blur-lg border-b border-white/10 w-full mt-4 py-4 px-6 space-y-3">
+      <a href="index.html" class="mobile-nav-link block py-2.5 px-3 rounded-lg text-slate-300 hover:bg-white/5">Accueil</a>
+      <a href="about.html" class="mobile-nav-link block py-2.5 px-3 rounded-lg text-slate-300 hover:bg-white/5">À Propos</a>
+      <a href="formations.html" class="mobile-nav-link block py-2.5 px-3 rounded-lg text-slate-300 hover:bg-white/5">Formations</a>
+      <div class="pl-4 border-l-2 border-emerald-500/30 space-y-1.5 my-2">
+        <a href="ccna-devnet.html" class="block py-1 text-xs text-cisco-blue font-bold">CCNA DevNet (30 000 DA)</a>
+        <a href="ccna1.html" class="block py-1 text-xs text-slate-400 hover:text-white">CCNA 1 (8 000 DA)</a>
+        <a href="ccna2.html" class="block py-1 text-xs text-slate-400 hover:text-white">CCNA 2 (8 000 DA)</a>
+        <a href="ccna3.html" class="block py-1 text-xs text-slate-400 hover:text-white">CCNA 3 (8 000 DA)</a>
+        <a href="linux.html" class="block py-1 text-xs text-slate-400 hover:text-white">Linux Essentials (10 000 DA)</a>
+        <a href="python1.html" class="block py-1 text-xs text-slate-400 hover:text-white">Python 1 (7 000 DA)</a>
+        <a href="python2.html" class="block py-1 text-xs text-emerald-400 font-bold">Python 2 (7 000 DA)</a>
+      </div>
+      <a href="contact.html" class="mobile-nav-link block py-2.5 px-3 rounded-lg text-slate-300 hover:bg-white/5">Contact</a>
+      <div class="pt-4 flex flex-col gap-2.5 border-t border-white/10">
+        <a href="inscription.html" class="w-full text-center bg-emerald-500 hover:bg-emerald-400 text-slate-950 py-2.5 rounded-xl font-bold text-sm transition-all">S'inscrire</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENT START -->
+  <main class="flex-grow pt-24 animate-fade-in">
+    
+    <!-- Course Banner -->
+    <section class="py-12 bg-radial from-[#13221e] to-slate-950 border-b border-white/5 relative overflow-hidden">
+      <div class="absolute -top-16 -right-16 w-52 h-52 bg-emerald-500/10 rounded-full filter blur-2xl"></div>
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8">
+            <div class="flex items-center gap-2 mb-4">
+              <a href="formations.html" class="text-xs text-slate-400 hover:text-emerald-400 transition-colors flex items-center gap-1">Formations</a>
+              <span class="text-xs text-slate-600">/</span>
+              <span class="text-xs text-emerald-400 font-semibold">Python Essentials 2</span>
+            </div>
+            
+            <h1 class="text-2xl sm:text-4xl font-extrabold text-white leading-tight">
+              Python Essentials 2 (Certification PCAP)
+            </h1>
+            <p class="text-slate-400 font-light mt-3 text-sm sm:text-base leading-relaxed">
+              Passez au niveau supérieur en développement applicatif. Maîtrisez la Programmation Orientée Objet (POO), les classes avancées, les fermetures (closures), les décorateurs et la gestion des fichiers.
+            </p>
+          </div>
+          <div class="lg:col-span-4 flex items-center justify-center lg:justify-end">
+            <div class="w-full max-w-sm aspect-[16/10] bg-secondary-navy border border-white/10 p-1.5 rounded-2xl shadow-2xl relative overflow-hidden">
+              <img src="src/assets/images/python2_oop_concepts_1787942525147.jpg" alt="Python Essentials 2" class="h-full w-full object-cover rounded-xl transition-transform duration-500 hover:scale-[1.03]" referrerPolicy="no-referrer" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Content Body -->
+    <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12">
+        
+        <!-- Left Main -->
+        <div class="lg:col-span-8 space-y-10">
+          
+          <div class="space-y-4">
+            <h2 class="text-lg sm:text-xl font-bold text-white border-l-4 border-emerald-500 pl-3">Description Générale</h2>
+            <p class="text-sm text-slate-300 leading-relaxed font-light">
+              La formation Python Essentials 2 s'adresse aux initiés désireux d'écrire un code professionnel, modulaire et efficace. Elle aborde en majeure partie la Programmation Orientée Objet (POO) à travers les notions de classes, d'instances d'objets, et d'héritage multiple. Le cursus traite également des techniques avancées d'interception d'exceptions, du traitement d'entrées/sorties de fichiers persistants, du fonctionnement interne des générateurs de flux de données, des closures, des décorateurs de fonction de haut niveau, et des expressions Lambda. Des cas réels d'implémentation de bibliothèques vous préparent à l'autonomie en entreprise.
+            </p>
+          </div>
+
+          <!-- Skills Acquired -->
+          <div class="space-y-4 bg-secondary-navy/40 border border-white/5 p-6 rounded-2xl">
+            <h2 class="text-lg font-bold text-white flex items-center gap-2">
+              <i data-lucide="award" class="text-emerald-500 w-5 h-5"></i>
+              Compétences Acquises
+            </h2>
+            <div class="grid sm:grid-cols-2 gap-4 mt-4">
+              <div class="flex items-start gap-3">
+                <i data-lucide="check-circle" class="text-emerald-500 w-4.5 h-4.5 mt-0.5 flex-shrink-0"></i>
+                <span class="text-xs text-slate-200 font-light font-sans">Maîtriser la POO (Classes, Héritages, Encapsulation)</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <i data-lucide="check-circle" class="text-emerald-500 w-4.5 h-4.5 mt-0.5 flex-shrink-0"></i>
+                <span class="text-xs text-slate-200 font-light font-sans">Développer des applications structurées</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <i data-lucide="check-circle" class="text-emerald-500 w-4.5 h-4.5 mt-0.5 flex-shrink-0"></i>
+                <span class="text-xs text-slate-200 font-light font-sans">Utiliser et empaqueter des bibliothèques externes</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <i data-lucide="check-circle" class="text-emerald-500 w-4.5 h-4.5 mt-0.5 flex-shrink-0"></i>
+                <span class="text-xs text-slate-200 font-light font-sans">Automatiser des tâches complexes d'administration</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <i data-lucide="check-circle" class="text-emerald-500 w-4.5 h-4.5 mt-0.5 flex-shrink-0"></i>
+                <span class="text-xs text-slate-200 font-light font-sans">Écrire un code professionnel, optimisé et documenté</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Program -->
+          <div class="space-y-4">
+            <h2 class="text-lg sm:text-xl font-bold text-white border-l-4 border-emerald-500 pl-3 mb-6">Plan de Cours</h2>
+            
+            <div class="space-y-3 font-sans">
+              <div class="p-4 bg-secondary-navy border border-white/5 rounded-xl flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <span class="w-7 h-7 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-xs font-bold text-emerald-500">01</span>
+                  <span class="text-xs font-semibold text-white">Fondations de la Programmation Orientée Objet (POO) : Classes & Propriétés</span>
+                </div>
+                <span class="text-[10px] text-slate-500 bg-white/5 px-2 py-0.5 rounded uppercase font-mono">POO</span>
+              </div>
+
+              <div class="p-4 bg-secondary-navy border border-white/5 rounded-xl flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <span class="w-7 h-7 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-xs font-bold text-emerald-500">02</span>
+                  <span class="text-xs font-semibold text-white">Instanciation d'Objets, Encapsulation, Méthodes & Constructeurs (__init__)</span>
+                </div>
+                <span class="text-[10px] text-slate-500 bg-white/5 px-2 py-0.5 rounded uppercase font-mono">Objects</span>
+              </div>
+
+              <div class="p-4 bg-secondary-navy border border-white/5 rounded-xl flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <span class="w-7 h-7 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-xs font-bold text-emerald-500">03</span>
+                  <span class="text-xs font-semibold text-white">L'Héritage simple, Héritage multiple, Polymorphisme & la fonction super()</span>
+                </div>
+                <span class="text-[10px] text-slate-500 bg-white/5 px-2 py-0.5 rounded uppercase font-mono text-emerald-400">Class</span>
+              </div>
+
+              <div class="p-4 bg-secondary-navy border border-white/5 rounded-xl flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <span class="w-7 h-7 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-xs font-bold text-emerald-500">04</span>
+                  <span class="text-xs font-semibold text-white">Gestion de fichiers persistants (E/S de fichiers textes, binaires, encodages)</span>
+                </div>
+                <span class="text-[10px] text-slate-500 bg-white/5 px-2 py-0.5 rounded uppercase font-mono">I/O Files</span>
+              </div>
+
+              <div class="p-4 bg-secondary-navy border border-white/5 rounded-xl flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <span class="w-7 h-7 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-xs font-bold text-emerald-500">05</span>
+                  <span class="text-xs font-semibold text-white">Exceptions avancées, hiérarchies de classes d'Erreurs personnalisées & débogage</span>
+                </div>
+                <span class="text-[10px] text-slate-500 bg-white/5 px-2 py-0.5 rounded uppercase font-mono">Exceptions</span>
+              </div>
+
+              <div class="p-4 bg-secondary-navy border border-white/5 rounded-xl flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <span class="w-7 h-7 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-xs font-bold text-emerald-500">06</span>
+                  <span class="text-xs font-semibold text-white">Générateurs (yield), Iterators customisés & Closures d'environnement lexical</span>
+                </div>
+                <span class="text-[10px] text-slate-500 bg-white/5 px-2 py-0.5 rounded uppercase font-mono">Logic</span>
+              </div>
+
+              <div class="p-4 bg-secondary-navy border border-white/5 rounded-xl flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <span class="w-7 h-7 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-xs font-bold text-emerald-500">07</span>
+                  <span class="text-xs font-semibold text-white">Décorateurs (@decorator), Expressions Lambda d'une ligne, Map, Filter & Reduce</span>
+                </div>
+                <span class="text-[10px] text-slate-550 bg-emerald-500/10 px-2 py-0.5 rounded uppercase font-mono font-bold text-emerald-400">Functional</span>
+              </div>
+
+              <div class="p-4 bg-secondary-navy border border-white/5 rounded-xl flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <span class="w-7 h-7 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-xs font-bold text-emerald-500">08</span>
+                  <span class="text-xs font-semibold text-white">Exploitation de bibliothèques tierces, d'APIs tierces & Grand Projet logiciel final</span>
+                </div>
+                <span class="text-[10px] text-slate-550 bg-emerald-500/10 px-2 py-0.5 rounded uppercase font-mono font-bold text-emerald-400">Library</span>
+              </div>
+            </div>
+            
+          </div>
+
+        </div>
+
+        <!-- Sidebar Right -->
+        <div class="lg:col-span-4 space-y-8">
+          
+          <!-- Key specs card with Price -->
+          <div class="bg-secondary-navy border border-white/10 rounded-2xl p-6 space-y-6 shadow-2xl">
+            <div class="border-b border-white/5 pb-4">
+              <span class="text-[11px] uppercase tracking-wider text-emerald-400 font-bold font-mono">Tarif de la Formation</span>
+              <div class="flex items-baseline gap-2 mt-1">
+                <span class="text-3xl font-extrabold text-white">7 000 DA</span>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1">Accès aux cours + Projets pratiques + Prépa PCAP</p>
+            </div>
+
+            <h3 class="text-sm font-bold uppercase tracking-wider text-slate-300 border-b border-white/5 pb-2">Informations Générales</h3>
+            <div class="space-y-4">
+              <div class="flex justify-between text-xs sm:text-sm">
+                <span class="text-slate-400">Durée :</span>
+                <span class="font-semibold text-white">50 heures de cours/labs</span>
+              </div>
+              <div class="flex justify-between text-xs sm:text-sm">
+                <span class="text-slate-400">Niveau requis :</span>
+                <span class="font-semibold text-white">Python Essentials 1</span>
+              </div>
+              <div class="flex justify-between text-xs sm:text-sm">
+                <span class="text-slate-400">Dispensé en :</span>
+                <span class="font-semibold text-white">Français</span>
+              </div>
+              <div class="flex justify-between text-xs sm:text-sm">
+                <span class="text-slate-400">Certification :</span>
+                <span class="font-semibold text-emerald-400">PCAP (Certified Associate Python)</span>
+              </div>
+              <div class="flex justify-between text-xs sm:text-sm">
+                <span class="text-slate-400">Format :</span>
+                <span class="font-semibold text-white">Cours interactifs & Développements</span>
+              </div>
+            </div>
+            
+            <a href="https://wa.me/213793277254?text=Bonjour%20Corepath%20Academy,%20je%20souhaite%20m'inscrire%20au%20cours%20Python%20Essentials%202%20(7000%20DA)" target="_blank" class="block w-full text-center bg-green-600 hover:bg-green-500 text-white font-bold py-3.5 rounded-xl text-sm transition-all shadow-lg shadow-green-500/20 flex items-center justify-center gap-2">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              S'inscrire via WhatsApp (7 000 DA)
+            </a>
+          </div>
+
+          <div class="bg-dark-navy border border-white/5 rounded-2xl p-6">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300 mb-3 flex items-center gap-1.5">
+              <i data-lucide="alert-circle" class="w-4 h-4 text-emerald-500"></i>
+              Profil Idéal / Prérequis
+            </h4>
+            <p class="text-xs text-slate-400 leading-relaxed font-light">
+              Il est recommandé d'avoir suivi le cours Python Essentials 1 ou de maîtriser les fondamentaux procéduraux de Python pour aborder la POO sereinement.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark-navy border-t border-white/10 py-12 text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+        
+        <div class="flex flex-col gap-4">
+          <a href="index.html" class="flex items-center gap-3">
+            <div class="h-10 w-10 rounded-full overflow-hidden border border-white/10 flex items-center justify-center bg-slate-900">
+              <img src="src/assets/images/corepath_academy_logo_1787942155850.jpg" alt="Corepath Academy Logo" class="h-full w-full object-cover" referrerPolicy="no-referrer" />
+            </div>
+            <span class="font-bold text-white text-lg tracking-tight">Corepath Academy</span>
+          </a>
+          <p class="text-xs leading-relaxed">
+            Académie d'élite spécialisée dans les compétences réseaux de pointe, l'automatisation Cisco DevNet, l'administration système Linux et la programmation Python.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-white/5 pb-2">Liens Rapides</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="index.html" class="hover:text-cisco-blue transition-colors">Accueil</a></li>
+            <li><a href="about.html" class="hover:text-cisco-blue transition-colors">À Propos de nous</a></li>
+            <li><a href="formations.html" class="hover:text-cisco-blue transition-colors">Nos Formations</a></li>
+            <li><a href="inscription.html" class="hover:text-cisco-blue transition-colors">Inscriptions</a></li>
+            <li><a href="contact.html" class="hover:text-cisco-blue transition-colors">Contact & Support</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-white/5 pb-2">Programmes Directs</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="ccna-devnet.html" class="text-cisco-blue font-semibold hover:text-white transition-colors">CCNA DevNet (30 000 DA)</a></li>
+            <li><a href="ccna1.html" class="hover:text-cisco-blue transition-colors">CCNA 1 – Intro Réseaux (8 000 DA)</a></li>
+            <li><a href="ccna2.html" class="hover:text-cisco-blue transition-colors">CCNA 2 – Switch & Routage (8 000 DA)</a></li>
+            <li><a href="ccna3.html" class="hover:text-cisco-blue transition-colors">CCNA 3 – Réseaux Entreprise (8 000 DA)</a></li>
+            <li><a href="linux.html" class="hover:text-cisco-blue transition-colors">Linux Essentials (10 000 DA)</a></li>
+            <li><a href="python1.html" class="hover:text-cisco-blue transition-colors">Python Essentials 1 (7 000 DA)</a></li>
+            <li><a href="python2.html" class="text-emerald-400 font-semibold hover:text-white transition-colors">Python Essentials 2 (7 000 DA)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-white/5 pb-2">Contactez-nous</h4>
+          <ul class="space-y-3.5 text-xs">
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="phone" class="w-4.5 h-4.5 text-cisco-blue flex-shrink-0"></i>
+              <span class="text-slate-300 font-medium hover:text-white transition-colors">+213 793 27 72 54</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="mail" class="w-4.5 h-4.5 text-cisco-blue flex-shrink-0"></i>
+              <span class="text-slate-300 font-medium hover:text-white transition-colors break-all">corepathacademy@gmail.com</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>Corepath Academy © 2026. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

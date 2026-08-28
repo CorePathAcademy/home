@@ -1,0 +1,6 @@
+{
+  "name": "Corepath Academy",
+  "description": "Académie de formation de haut niveau spécialisée en Réseaux Cisco CCNA, Linux et Python en français.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

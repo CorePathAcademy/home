@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <link rel="icon" type="image/jpeg" href="src/assets/images/corepath_academy_logo_1787942155850.jpg" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inscription & Tarifs - Corepath Academy</title>
+  <meta name="description" content="Inscrivez-vous directement via WhatsApp aux formations CCNA DevNet, CCNA 1-2-3, Linux et Python. Traitement immédiat de votre dossier." />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'cisco-blue': '#049FD9',
+            'dark-navy': '#1B1F3B',
+            'secondary-navy': '#0E1122',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 flex flex-col min-h-screen selection:bg-cisco-blue selection:text-white">
+
+  <!-- NAVIGATION HEADER -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-dark-navy/90 backdrop-blur-md border-b border-white/5 py-5 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        
+        <a href="index.html" class="flex items-center gap-3 group" id="nav-brand">
+          <div class="h-11 w-11 rounded-full overflow-hidden border border-white/10 shadow-lg shadow-cisco-blue/10 group-hover:scale-105 transition-all duration-300 flex items-center justify-center bg-slate-900">
+            <img src="src/assets/images/corepath_academy_logo_1787942155850.jpg" alt="Corepath Academy Logo" class="h-full w-full object-cover" referrerPolicy="no-referrer" />
+          </div>
+          <div class="flex flex-col">
+            <span class="font-bold text-lg sm:text-xl tracking-tight text-white group-hover:text-cisco-blue transition-colors">Corepath Academy</span>
+            <span class="text-[10px] font-mono uppercase tracking-widest text-[#049FD9]/80 font-semibold">Cisco • Linux • Python</span>
+          </div>
+        </a>
+
+        <!-- Desktop Links -->
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="index.html" class="nav-link text-slate-300 hover:text-white transition-colors py-1.5 px-0.5 border-b-2 border-transparent hover:border-cisco-blue/50 text-[14px] font-medium">Accueil</a>
+          <a href="about.html" class="nav-link text-slate-300 hover:text-white transition-colors py-1.5 px-0.5 border-b-2 border-transparent hover:border-cisco-blue/50 text-[14px] font-medium">À Propos</a>
+          <a href="formations.html" class="nav-link text-slate-300 hover:text-white transition-colors py-1.5 px-0.5 border-b-2 border-transparent hover:border-cisco-blue/50 text-[14px] font-medium">Formations</a>
+          
+          <div class="relative group">
+            <button class="flex items-center gap-1.5 text-slate-300 group-hover:text-white transition-colors py-1.5 text-[14px] font-medium">
+              Syllabus <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i>
+            </button>
+            <div class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-80 bg-secondary-navy border border-white/10 rounded-xl p-3 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+              <div class="space-y-1">
+                <a href="ccna-devnet.html" class="block p-2.5 rounded-lg bg-cisco-blue/10 border border-cisco-blue/30 transition-colors group/item">
+                  <div class="flex items-center justify-between">
+                    <p class="text-xs font-bold text-cisco-blue mb-0.5">CCNA DevNet Associate</p>
+                    <span class="text-[9px] bg-emerald-500 text-slate-950 font-bold px-1.5 py-0.2 rounded font-mono">30 000 DA</span>
+                  </div>
+                  <p class="text-[10px] text-slate-300">Voucher -58% à -70% Pearson VUE (300$)</p>
+                </a>
+                <a href="ccna1.html" class="block p-2 rounded-lg hover:bg-white/5 transition-colors group/item">
+                  <div class="flex items-center justify-between">
+                    <p class="text-xs font-semibold text-white group-hover/item:text-cisco-blue mb-0.5">CCNA 1 : Intro aux Réseaux</p>
+                    <span class="text-[9px] text-slate-400 font-mono">8 000 DA</span>
+                  </div>
+                  <p class="text-[10px] text-slate-400">Fondations fondamentales IP & Ethernet</p>
+                </a>
+                <a href="ccna2.html" class="block p-2 rounded-lg hover:bg-white/5 transition-colors group/item">
+                  <div class="flex items-center justify-between">
+                    <p class="text-xs font-semibold text-white group-hover/item:text-cisco-blue mb-0.5">CCNA 2 : Commutation & Routage</p>
+                    <span class="text-[9px] text-slate-400 font-mono">8 000 DA</span>
+                  </div>
+                  <p class="text-[10px] text-slate-400">VLANs, EtherChannel, Wi-Fi & Sécurité</p>
+                </a>
+                <a href="ccna3.html" class="block p-2 rounded-lg hover:bg-white/5 transition-colors group/item">
+                  <div class="flex items-center justify-between">
+                    <p class="text-xs font-semibold text-white group-hover/item:text-cisco-blue mb-0.5">CCNA 3 : Réseaux d'Entreprise</p>
+                    <span class="text-[9px] text-slate-400 font-mono">8 000 DA</span>
+                  </div>
+                  <p class="text-[10px] text-slate-400">OSPF, ACLs, NAT & Programmabilité</p>
+                </a>
+                <a href="linux.html" class="block p-2 rounded-lg hover:bg-white/5 transition-colors group/item border-t border-white/5">
+                  <div class="flex items-center justify-between">
+                    <p class="text-xs font-semibold text-white group-hover/item:text-cisco-blue mb-0.5">Linux Essentials</p>
+                    <span class="text-[9px] text-yellow-400 font-mono">10 000 DA</span>
+                  </div>
+                  <p class="text-[10px] text-slate-400">Ligne de commande, Bash & Administration</p>
+                </a>
+                <a href="python1.html" class="block p-2 rounded-lg hover:bg-white/5 transition-colors group/item">
+                  <div class="flex items-center justify-between">
+                    <p class="text-xs font-semibold text-white group-hover/item:text-cisco-blue mb-0.5">Python Essentials 1</p>
+                    <span class="text-[9px] text-emerald-400 font-mono">7 000 DA</span>
+                  </div>
+                  <p class="text-[10px] text-slate-400">Syntaxe de base, Structures & Fonctions</p>
+                </a>
+                <a href="python2.html" class="block p-2 rounded-lg hover:bg-white/5 transition-colors group/item">
+                  <div class="flex items-center justify-between">
+                    <p class="text-xs font-semibold text-white group-hover/item:text-cisco-blue mb-0.5">Python Essentials 2</p>
+                    <span class="text-[9px] text-emerald-400 font-mono">7 000 DA</span>
+                  </div>
+                  <p class="text-[10px] text-slate-400">POO avancée, Fichiers & Programmation Pro</p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a href="contact.html" class="nav-link text-slate-300 hover:text-white transition-colors py-1.5 px-0.5 border-b-2 border-transparent hover:border-cisco-blue/50 text-[14px] font-medium">Contact</a>
+        </nav>
+
+        <div class="hidden lg:flex items-center gap-4">
+          <a href="inscription.html" class="bg-cisco-blue text-white hover:bg-cisco-blue/90 px-4.5 py-2 rounded-xl text-sm font-semibold shadow-lg shadow-cisco-blue/20 transition-all duration-300">S'inscrire</a>
+          <a href="formations.html" class="bg-white/10 text-white hover:bg-white/15 px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300">Formations</a>
+        </div>
+
+        <button id="menu-btn" class="lg:hidden p-2 text-slate-300 hover:text-white focus:outline-none" aria-label="Toggle Menu">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-secondary-navy/95 backdrop-blur-lg border-b border-white/10 w-full mt-4 py-4 px-6 space-y-3">
+      <a href="index.html" class="mobile-nav-link block py-2.5 px-3 rounded-lg text-slate-300 hover:bg-white/5">Accueil</a>
+      <a href="about.html" class="mobile-nav-link block py-2.5 px-3 rounded-lg text-slate-300 hover:bg-white/5">À Propos</a>
+      <a href="formations.html" class="mobile-nav-link block py-2.5 px-3 rounded-lg text-slate-300 hover:bg-white/5">Formations</a>
+      <div class="pl-4 border-l-2 border-cisco-blue/30 space-y-1.5 my-2">
+        <a href="ccna-devnet.html" class="block py-1 text-xs text-cisco-blue font-bold">CCNA DevNet (30 000 DA)</a>
+        <a href="ccna1.html" class="block py-1 text-xs text-slate-400 hover:text-white">CCNA 1 (8 000 DA)</a>
+        <a href="ccna2.html" class="block py-1 text-xs text-slate-400 hover:text-white">CCNA 2 (8 000 DA)</a>
+        <a href="ccna3.html" class="block py-1 text-xs text-slate-400 hover:text-white">CCNA 3 (8 000 DA)</a>
+        <a href="linux.html" class="block py-1 text-xs text-slate-400 hover:text-white">Linux Essentials (10 000 DA)</a>
+        <a href="python1.html" class="block py-1 text-xs text-slate-400 hover:text-white">Python 1 (7 000 DA)</a>
+        <a href="python2.html" class="block py-1 text-xs text-slate-400 hover:text-white">Python 2 (7 000 DA)</a>
+      </div>
+      <a href="contact.html" class="mobile-nav-link block py-2.5 px-3 rounded-lg text-slate-300 hover:bg-white/5">Contact</a>
+      <div class="pt-4 flex flex-col gap-2.5 border-t border-white/10">
+        <a href="inscription.html" class="w-full text-center bg-cisco-blue hover:bg-cisco-blue/90 text-white py-2.5 rounded-xl font-semibold text-sm shadow-lg shadow-cisco-blue/25 transition-all">S'inscrire</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow pt-24 animate-fade-in mb-12">
+    
+    <section class="py-10 text-center relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <span class="text-xs font-bold uppercase tracking-widest text-[#049FD9] mb-3 px-3 py-1 bg-cisco-blue/10 border border-cisco-blue/20 rounded-full inline-block">Portail Inscriptions & Tarifs</span>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-4 mb-2">Inscription Directe & Sécurisée</h1>
+        <p class="text-slate-400 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
+          Choisissez votre formation et inscrivez-vous directement via WhatsApp pour un traitement instantané et sans formulaire fastidieux !
+        </p>
+      </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="bg-secondary-navy border border-white/10 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+        
+        <!-- Subtle glow -->
+        <div class="absolute -top-12 -right-12 w-48 h-48 bg-cisco-blue/10 rounded-full filter blur-2xl pointer-events-none"></div>
+
+        <div class="text-center mb-8">
+          <div class="inline-flex bg-green-500/10 text-green-500 w-14 h-14 rounded-full items-center justify-center border border-green-500/20 mb-4">
+            <i data-lucide="message-circle" class="w-7 h-7"></i>
+          </div>
+          <h2 class="text-xl sm:text-2xl font-bold text-white">Sélectionnez Votre Formation</h2>
+          <p class="text-slate-400 text-xs sm:text-sm mt-3 leading-relaxed">
+            Cliquez sur <strong>S'inscrire</strong> pour dialoguer immédiatement avec un conseiller pédagogique de Corepath Academy et finaliser votre inscription.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          
+          <!-- Course Card 0: CCNA DEVNET (FEATURED) -->
+          <div class="bg-slate-950/60 border-2 border-cisco-blue/40 hover:border-cisco-blue rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 transition-all duration-300 group shadow-lg shadow-cisco-blue/5">
+            <div class="flex items-center gap-4">
+              <div class="bg-cisco-blue/15 text-cisco-blue w-12 h-12 rounded-xl flex items-center justify-center border border-cisco-blue/30 flex-shrink-0">
+                <i data-lucide="cpu" class="w-6 h-6"></i>
+              </div>
+              <div class="text-left">
+                <div class="flex items-center gap-2">
+                  <h3 class="font-bold text-white text-sm sm:text-base group-hover:text-cisco-blue transition-colors">CCNA DevNet Associate (200-901)</h3>
+                  <span class="text-[9px] bg-emerald-500 text-slate-950 font-bold px-1.5 py-0.5 rounded font-mono uppercase">Voucher -58% à -70%</span>
+                </div>
+                <p class="text-[11px] text-slate-300 mt-0.5">70 heures • APIs REST, Python, CI/CD, Docker & NetDevOps • Voucher Pearson VUE (300$)</p>
+                <p class="text-xs text-emerald-400 font-mono font-bold mt-1">Tarif : 30 000 DA</p>
+              </div>
+            </div>
+            <a href="https://wa.me/213793277254?text=Bonjour%20Corepath%20Academy,%20je%20souhaite%20m'inscrire%20au%20cours%20CCNA%20DevNet%20(30000%20DA)%20avec%20le%20Voucher%20Pearson%20VUE" target="_blank" class="w-full sm:w-auto bg-green-600 hover:bg-green-500 text-white font-bold py-2.5 px-5 rounded-xl text-xs flex items-center justify-center gap-2 transition-all shrink-0 shadow-lg shadow-green-500/20 whitespace-nowrap">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              S'inscrire (30 000 DA)
+            </a>
+          </div>
+
+          <!-- Course Card 1: CCNA 1 -->
+          <div class="bg-slate-950/40 border border-white/5 hover:border-cisco-blue/30 rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 transition-all duration-300 group">
+            <div class="flex items-center gap-4">
+              <div class="bg-cisco-blue/10 text-cisco-blue w-11 h-11 rounded-xl flex items-center justify-center border border-cisco-blue/25 flex-shrink-0">
+                <span class="font-bold text-[10px] font-mono">CCNA1</span>
+              </div>
+              <div class="text-left">
+                <h3 class="font-bold text-white text-sm group-hover:text-cisco-blue transition-colors">CCNA 1 – Introduction aux Réseaux (ITN)</h3>
+                <p class="text-[11px] text-slate-400 mt-0.5">70 heures • Fondations fondamentales IP & Ethernet • Débutant accepté</p>
+                <p class="text-xs text-cisco-blue font-mono font-bold mt-1">Tarif : 8 000 DA</p>
+              </div>
+            </div>
+            <a href="https://wa.me/213793277254?text=Bonjour%20Corepath%20Academy,%20je%20souhaite%20m'inscrire%20au%20cours%20CCNA%201%20(8000%20DA)" target="_blank" class="w-full sm:w-auto bg-green-600 hover:bg-green-500 text-white font-bold py-2.5 px-5 rounded-xl text-xs flex items-center justify-center gap-2 transition-all shrink-0 shadow-lg shadow-green-500/10 whitespace-nowrap">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              S'inscrire (8 000 DA)
+            </a>
+          </div>
+
+          <!-- Course Card 2: CCNA 2 -->
+          <div class="bg-slate-950/40 border border-white/5 hover:border-cisco-blue/30 rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 transition-all duration-300 group">
+            <div class="flex items-center gap-4">
+              <div class="bg-cisco-blue/10 text-cisco-blue w-11 h-11 rounded-xl flex items-center justify-center border border-cisco-blue/25 flex-shrink-0">
+                <span class="font-bold text-[10px] font-mono">CCNA2</span>
+              </div>
+              <div class="text-left">
+                <h3 class="font-bold text-white text-sm group-hover:text-cisco-blue transition-colors">CCNA 2 – Commutation, Routage & Sans Fil (SRWE)</h3>
+                <p class="text-[11px] text-slate-400 mt-0.5">70 heures • VLANs, EtherChannel, Wi-Fi & Sécurité • CCNA 1 recommandé</p>
+                <p class="text-xs text-cisco-blue font-mono font-bold mt-1">Tarif : 8 000 DA</p>
+              </div>
+            </div>
+            <a href="https://wa.me/213793277254?text=Bonjour%20Corepath%20Academy,%20je%20souhaite%20m'inscrire%20au%20cours%20CCNA%202%20(8000%20DA)" target="_blank" class="w-full sm:w-auto bg-green-600 hover:bg-green-500 text-white font-bold py-2.5 px-5 rounded-xl text-xs flex items-center justify-center gap-2 transition-all shrink-0 shadow-lg shadow-green-500/10 whitespace-nowrap">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              S'inscrire (8 000 DA)
+            </a>
+          </div>
+
+          <!-- Course Card 3: CCNA 3 -->
+          <div class="bg-slate-950/40 border border-white/5 hover:border-cisco-blue/30 rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 transition-all duration-300 group">
+            <div class="flex items-center gap-4">
+              <div class="bg-cisco-blue/10 text-cisco-blue w-11 h-11 rounded-xl flex items-center justify-center border border-cisco-blue/25 flex-shrink-0">
+                <span class="font-bold text-[10px] font-mono">CCNA3</span>
+              </div>
+              <div class="text-left">
+                <h3 class="font-bold text-white text-sm group-hover:text-cisco-blue transition-colors">CCNA 3 – Réseaux d'Entreprise, Sécurité & Auto (ENSA)</h3>
+                <p class="text-[11px] text-slate-400 mt-0.5">70 heures • OSPF, ACLs, NAT & Programmabilité • Préparation CCNA 200-301</p>
+                <p class="text-xs text-cisco-blue font-mono font-bold mt-1">Tarif : 8 000 DA</p>
+              </div>
+            </div>
+            <a href="https://wa.me/213793277254?text=Bonjour%20Corepath%20Academy,%20je%20souhaite%20m'inscrire%20au%20cours%20CCNA%203%20(8000%20DA)" target="_blank" class="w-full sm:w-auto bg-green-600 hover:bg-green-500 text-white font-bold py-2.5 px-5 rounded-xl text-xs flex items-center justify-center gap-2 transition-all shrink-0 shadow-lg shadow-green-500/10 whitespace-nowrap">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              S'inscrire (8 000 DA)
+            </a>
+          </div>
+
+          <!-- Course Card 4: Linux Essentials -->
+          <div class="bg-slate-950/40 border border-white/5 hover:border-yellow-500/30 rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 transition-all duration-300 group">
+            <div class="flex items-center gap-4">
+              <div class="bg-yellow-500/10 text-yellow-500 w-11 h-11 rounded-xl flex items-center justify-center border border-yellow-500/25 flex-shrink-0">
+                <span class="font-bold text-[10px] font-mono">LINUX</span>
+              </div>
+              <div class="text-left">
+                <h3 class="font-bold text-white text-sm group-hover:text-yellow-500 transition-colors">Linux Essentials (LPI 010-160)</h3>
+                <p class="text-[11px] text-slate-400 mt-0.5">40 heures • Admin système, Bash & Ligne de commande • Débutant accepté</p>
+                <p class="text-xs text-yellow-400 font-mono font-bold mt-1">Tarif : 10 000 DA</p>
+              </div>
+            </div>
+            <a href="https://wa.me/213793277254?text=Bonjour%20Corepath%20Academy,%20je%20souhaite%20m'inscrire%20au%20cours%20Linux%20Essentials%20(10000%20DA)" target="_blank" class="w-full sm:w-auto bg-green-600 hover:bg-green-500 text-white font-bold py-2.5 px-5 rounded-xl text-xs flex items-center justify-center gap-2 transition-all shrink-0 shadow-lg shadow-green-500/10 whitespace-nowrap">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              S'inscrire (10 000 DA)
+            </a>
+          </div>
+
+          <!-- Course Card 5: Python 1 -->
+          <div class="bg-slate-950/40 border border-white/5 hover:border-emerald-500/30 rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 transition-all duration-300 group">
+            <div class="flex items-center gap-4">
+              <div class="bg-emerald-500/10 text-emerald-500 w-11 h-11 rounded-xl flex items-center justify-center border border-emerald-500/25 flex-shrink-0">
+                <span class="font-bold text-[10px] font-mono">PYTH1</span>
+              </div>
+              <div class="text-left">
+                <h3 class="font-bold text-white text-sm group-hover:text-emerald-500 transition-colors">Python Essentials 1 (PCEP)</h3>
+                <p class="text-[11px] text-slate-400 mt-0.5">45 heures • Syntaxe, Variables, Listes & Fonctions • Aucun prérequis</p>
+                <p class="text-xs text-emerald-400 font-mono font-bold mt-1">Tarif : 7 000 DA</p>
+              </div>
+            </div>
+            <a href="https://wa.me/213793277254?text=Bonjour%20Corepath%20Academy,%20je%20souhaite%20m'inscrire%20au%20cours%20Python%20Essentials%201%20(7000%20DA)" target="_blank" class="w-full sm:w-auto bg-green-600 hover:bg-green-500 text-white font-bold py-2.5 px-5 rounded-xl text-xs flex items-center justify-center gap-2 transition-all shrink-0 shadow-lg shadow-green-500/10 whitespace-nowrap">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              S'inscrire (7 000 DA)
+            </a>
+          </div>
+
+          <!-- Course Card 6: Python 2 -->
+          <div class="bg-slate-950/40 border border-white/5 hover:border-emerald-500/30 rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 transition-all duration-300 group">
+            <div class="flex items-center gap-4">
+              <div class="bg-emerald-500/10 text-emerald-500 w-11 h-11 rounded-xl flex items-center justify-center border border-emerald-500/25 flex-shrink-0">
+                <span class="font-bold text-[10px] font-mono">PYTH2</span>
+              </div>
+              <div class="text-left">
+                <h3 class="font-bold text-white text-sm group-hover:text-emerald-500 transition-colors">Python Essentials 2 (PCAP)</h3>
+                <p class="text-[11px] text-slate-400 mt-0.5">50 heures • Algorithmes, Modules & Objets avancés • Python 1 conseillé</p>
+                <p class="text-xs text-emerald-400 font-mono font-bold mt-1">Tarif : 7 000 DA</p>
+              </div>
+            </div>
+            <a href="https://wa.me/213793277254?text=Bonjour%20Corepath%20Academy,%20je%20souhaite%20m'inscrire%20au%20cours%20Python%20Essentials%202%20(7000%20DA)" target="_blank" class="w-full sm:w-auto bg-green-600 hover:bg-green-500 text-white font-bold py-2.5 px-5 rounded-xl text-xs flex items-center justify-center gap-2 transition-all shrink-0 shadow-lg shadow-green-500/10 whitespace-nowrap">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              S'inscrire (7 000 DA)
+            </a>
+          </div>
+
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-white/5 text-center">
+          <p class="text-xs text-slate-400">
+            Vous préférez nous téléphoner ? Contactez notre secrétariat au <a href="tel:+213793277254" class="hover:text-cisco-blue font-bold text-white transition-colors">+213 793 27 72 54</a>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark-navy border-t border-white/10 py-12 text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+        
+        <div class="flex flex-col gap-4">
+          <a href="index.html" class="flex items-center gap-3">
+            <div class="h-10 w-10 rounded-full overflow-hidden border border-white/10 flex items-center justify-center bg-slate-900">
+              <img src="src/assets/images/corepath_academy_logo_1787942155850.jpg" alt="Corepath Academy Logo" class="h-full w-full object-cover" referrerPolicy="no-referrer" />
+            </div>
+            <span class="font-bold text-white text-lg tracking-tight">Corepath Academy</span>
+          </a>
+          <p class="text-xs leading-relaxed">
+            Académie d'élite spécialisée dans les compétences réseaux de pointe, l'automatisation Cisco DevNet, l'administration système Linux et la programmation Python.
+          </p>
+          <div class="flex items-center gap-3.5 mt-2">
+            <a href="https://www.facebook.com/profile.php?id=61590667865435" target="_blank" class="w-9 h-9 rounded-lg bg-white/5 hover:bg-cisco-blue hover:text-white transition-all flex items-center justify-center border border-white/5" aria-label="Facebook">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/corepathacademy" target="_blank" class="w-9 h-9 rounded-lg bg-white/5 hover:bg-cisco-blue hover:text-white transition-all flex items-center justify-center border border-white/5" aria-label="Instagram">
+              <svg class="w-4 h-4 stroke-current fill-none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-white/5 pb-2">Liens Rapides</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="index.html" class="hover:text-cisco-blue transition-colors">Accueil</a></li>
+            <li><a href="about.html" class="hover:text-cisco-blue transition-colors">À Propos de nous</a></li>
+            <li><a href="formations.html" class="hover:text-cisco-blue transition-colors">Nos Formations</a></li>
+            <li><a href="inscription.html" class="hover:text-cisco-blue transition-colors">Inscriptions</a></li>
+            <li><a href="contact.html" class="hover:text-cisco-blue transition-colors">Contact & Support</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-white/5 pb-2">Programmes Directs</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="ccna-devnet.html" class="text-cisco-blue font-semibold hover:text-white transition-colors">CCNA DevNet (30 000 DA)</a></li>
+            <li><a href="ccna1.html" class="hover:text-cisco-blue transition-colors">CCNA 1 – Intro Réseaux (8 000 DA)</a></li>
+            <li><a href="ccna2.html" class="hover:text-cisco-blue transition-colors">CCNA 2 – Switch & Routage (8 000 DA)</a></li>
+            <li><a href="ccna3.html" class="hover:text-cisco-blue transition-colors">CCNA 3 – Réseaux Entreprise (8 000 DA)</a></li>
+            <li><a href="linux.html" class="hover:text-cisco-blue transition-colors">Linux Essentials (10 000 DA)</a></li>
+            <li><a href="python1.html" class="hover:text-cisco-blue transition-colors">Python Essentials 1 (7 000 DA)</a></li>
+            <li><a href="python2.html" class="hover:text-cisco-blue transition-colors">Python Essentials 2 (7 000 DA)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-white/5 pb-2">Contactez-nous</h4>
+          <ul class="space-y-3.5 text-xs">
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="phone" class="w-4.5 h-4.5 text-cisco-blue flex-shrink-0"></i>
+              <span class="text-slate-300 font-medium hover:text-white transition-colors">+213 793 27 72 54</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="mail" class="w-4.5 h-4.5 text-cisco-blue flex-shrink-0"></i>
+              <span class="text-slate-300 font-medium hover:text-white transition-colors break-all">corepathacademy@gmail.com</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>Corepath Academy © 2026. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
