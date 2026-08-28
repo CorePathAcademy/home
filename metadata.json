@@ -1,6 +1,0 @@
-{
-  "name": "CorePath Academy",
-  "description": "Plateforme d'excellence de formations en direct Cisco CCNA DevNet et CCNA Entreprise, Python et Linux avec vouchers Pearson VUE de -58% à -70% et badges officiels Cisco NetAcad.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
