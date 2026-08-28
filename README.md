@@ -28,7 +28,8 @@ de leurs compétences grâce à des contenus pédagogiques accessibles et de qua
 
 <ul>
   <li>Réseaux Informatiques</li>
-  <li>Cisco CCNA</li>
+  <li>Cisco CCNA Entreprise</li>
+  <li>Cisco CCNA DEVNET Automation</li>
   <li>Cybersécurité</li>
   <li>Développement Web</li>
   <li>Linux et Administration Système</li>

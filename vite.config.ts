@@ -12,26 +12,11 @@ export default defineConfig(() => {
       },
     },
     server: {
+      // HMR is disabled in AI Studio via DISABLE_HMR env var.
+      // Do not modifyâfile watching is disabled to prevent flickering during agent edits.
       hmr: process.env.DISABLE_HMR !== 'true',
+      // Disable file watching when DISABLE_HMR is true to save CPU during agent edits.
       watch: process.env.DISABLE_HMR === 'true' ? null : {},
-    },
-    build: {
-      rollupOptions: {
-        input: {
-          main: path.resolve(__dirname, 'index.html'),
-          about: path.resolve(__dirname, 'about.html'),
-          formations: path.resolve(__dirname, 'formations.html'),
-          ccna1: path.resolve(__dirname, 'ccna1.html'),
-          ccna2: path.resolve(__dirname, 'ccna2.html'),
-          ccna3: path.resolve(__dirname, 'ccna3.html'),
-          linux: path.resolve(__dirname, 'linux.html'),
-          python1: path.resolve(__dirname, 'python1.html'),
-          python2: path.resolve(__dirname, 'python2.html'),
-          inscription: path.resolve(__dirname, 'inscription.html'),
-          landing_ccna1: path.resolve(__dirname, 'landing-ccna1.html'),
-          contact: path.resolve(__dirname, 'contact.html'),
-        },
-      },
     },
   };
 });
